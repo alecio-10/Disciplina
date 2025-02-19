@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Seguimiento a Disciplina Escolar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color:#eee;
+        }
+        h1 {
+            text-align: center;
+            color: white;
+            text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+        }
+        .form-container {
+            background-color:white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            padding: 20px;
+            width: 80%;
+            margin: auto;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"], input[type="date"], textarea, select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        textarea {
+            resize: vertical;
+        }
+        .form-actions {
+            text-align: center;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <h1>SEC</h1>
+    <h1>Seguimiento Escolar a Comportamiento</h1>
+    <div class="form-container">
+        <form action="https://script.google.com/macros/s/AKfycby9WSJAwsEogtEQuZMQZYtab0NAApkC-KFp6lxthWgt/dev" method="GET" id="f">
+            <div class="form-group">
+                <label for="fecha">Fecha y Hora del Incidente:</label>
+                <input type="datetime-local" id="fecha" name="fecha"  required>
+            </div>
+            <!-- Datos del estudiante -->
+            <div class="form-group">
+                <label for="nombre">Nombre Completo:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Escribe el Nombre y Apellidos de estudiante" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="grado">Curso Escolar:</label>
+                <input type="text" id="grado" name="grado" placeholder="Escribe el Curso" required>
+            </div>
+
+            <!-- Comportamiento diario -->
+            
+            <div class="form-group">
+                <label for="actitud">Actitud en Clase:</label>
+                <textarea id="actitud" name="actitud" rows="4" placeholder="Explica la Actititud del estudiante frente al incidente(pasiva, Agresiva, indiferente etc.)"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="interacciones">Interacciones con Compañeros:</label>
+                <textarea id="interacciones" name="interacciones" rows="4" placeholder="Describe como es el comportamiento del estudiante con sus compañeros"></textarea>
+            </div>
+                   <!-- Incidentes de disciplina -->
+            <div class="form-group">
+                <label for="incidente">Descripción del Incidente:</label>
+                <textarea id="incidente" name="incidente" rows="4" placeholder="Describe el hecho donde esta involucrado el estudiante"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="acciones">Acciones Tomadas:</label>
+                <textarea id="acciones" name="acciones" rows="4" placeholder="Describe que tipo de acciones tomaron sus compañero o profesores frente al incidente"></textarea>
+            </div>
+            
+
+            <!-- Seguimiento y Resolución -->
+            <div class="form-group">
+                <label for="medidas">Medidas Correctivas Aplicadas:</label>
+                <textarea id="medidas" name="medidas" rows="4" placeholder="Explica que medidas tomó el docente frente al hecho"></textarea>
+            </div>
+            
+
+            <!-- Observaciones del Profesorado -->
+            <div class="form-group">
+                <label for="observaciones_profesor">Observaciones del Docente:</label>
+                <textarea id="observaciones_profesor" name="observaciones_profesor" rows="4" placeholder="Explica si el docente realizo las observaciones pertinente"></textarea>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit">Reportar Incidente</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
